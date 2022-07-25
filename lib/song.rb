@@ -10,7 +10,7 @@ class Song
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS songs (id INTEGER PRIMARY KEY, name TEXT, album TEXT)
-        SQL
+    SQL
     DB[:conn].execute(sql)
   end
 
@@ -34,3 +34,9 @@ class Song
     song.save
   end
 end
+
+Song.create_table
+# => []
+
+DB[:conn].execute("PRAGMA table_info(songs)")
+# => [[0, "id", "INTEGER", 0, nil, 1], [1, "name", "TEXT", 0, nil, 0], [2, "album", "TEXT", 0, nil, 0]]
