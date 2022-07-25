@@ -37,7 +37,6 @@ end
 
 # Song.create_table
 # # []
-
 # DB[:conn].execute("PRAGMA table_info(songs)")
 # # [[0, "id", "INTEGER", 0, nil, 1], [1, "name", "TEXT", 0, nil, 0], [2, "album", "TEXT", 0, nil, 0]]
 
