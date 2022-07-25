@@ -48,5 +48,5 @@ end
 # # <Song:0x00007fed218c6200 @album="The Black Album", @id=nil, @name="99 Problems">
 # ninety_nine_problems.save
 # # []
-# pry(main) > DB[:conn].execute("SELECT * FROM songs;")
+# DB[:conn].execute("SELECT * FROM songs;")
 # # [[1, "Hello", "25"], [2, "99 Problems", "The Black Album"]]
